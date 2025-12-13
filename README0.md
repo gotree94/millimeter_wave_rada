@@ -7,7 +7,15 @@ Millimeter-Wave Radar + Image Sensor 기반 ADAS / 자율주행 기술 정리
 ---
 
 # 📌 Table of Contents
-1. 주요 센서 기술 리스트업  
+1. 주요 센서 기술 리스트업
+ 1.1 mmWave Radar (24/77/79 GHz)
+ 1.2 이미지 센서 기반 카메라
+ 1.3 LiDAR
+ 1.4 초음파 센서
+ 1.5 IMU / 로컬라이제이션
+ 1.6 GNSS
+ 1.7 V2X 통신
+ 1.8 HD Map 및 센서 퓨전
 2. 자동차 회사별 센서 구성 및 적용 예  
 3. 기술 공급 업체(센서·칩·플랫폼 벤더)  
 4. 제품 형태로 제공되는 ADAS/자율주행 패키지  
