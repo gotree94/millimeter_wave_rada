@@ -133,16 +133,16 @@
 
 |Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|Ansys SIwave	높음	중	PCB·패키지 SI/PI 강력, HFSS 연동	PCB 중심	DDR, SerDes
-|Cadence Sigrity	매우 높음	상	업계 표준 SI/PI, 패키지 최강	고가, 난이도 높음	고속 인터페이스
+|Ansys SIwave	|높음|	중|	PCB·패키지 SI/PI 강력, HFSS 연동	|PCB 중심	|DDR, SerDes|
+|Cadence Sigrity	|매우 높음|	상|	업계 표준 SI/PI, 패키지 최강	|고가, 난이도 높음|	고속 인터페이스|
 
 ## ✔ 무료/오픈소스
 
-|Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|Sonnet Lite	무료	중	2.5D EM, MMIC 학습용 최고	사이즈 제한
-|OpenEMS	무료	중~상	Python 자동화 가능	GUI 부족
-|Qucs-S	무료	하	회로 시뮬레이션 입문용	S-parameter 처리 약함
+|Tool	|비용 수준	|난이도	|장점	|단점	|
+|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Sonnet Lite	|무료	|중	|2.5D EM, MMIC 학습용 최고	|사이즈 제한|
+|OpenEMS	|무료	|중~상	|Python 자동화 가능	|GUI 부족|
+|Qucs-S	|무료	|하	|회로 시뮬레이션 입문용	|S-parameter 처리 약함|
 
 # ✅ ② RF 설계자의 로드맵 (기초 → 실무 → 전문 수준)
 
