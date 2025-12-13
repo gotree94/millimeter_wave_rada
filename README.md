@@ -171,7 +171,7 @@ $$P_r = \frac{P_t \cdot G^2 \cdot \lambda^2 \cdot \sigma}{(4\pi)^3 \cdot R^4}$$
 
 ---
 
-### 주요 변조 방식
+## 주요 변조 방식
 
 - **FMCW (Frequency Modulated Continuous Wave)**: 대부분의 자동차/산업용 레이더
 - **PCR (Pulsed Coherent Radar)**: Acconeer 고유 기술, 초저전력
