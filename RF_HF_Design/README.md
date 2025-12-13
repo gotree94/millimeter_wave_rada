@@ -3,21 +3,21 @@
 ## 🟦 1. 구조 기반 전자기(EM) Full-Wave 시뮬레이터
 * 안테나, 패키지, 고속 인터커넥트, 파워 인티그리티 등 3D 모델 기반 시뮬레이션용
 
-🔹CST Studio Suite (Dassault Systemes)
+* CST Studio Suite (Dassault Systemes)
    * HFSS와 더불어 업계 표준 2대장
    * Time-domain solver 빨라서 안테나/EMI/신호 무결성(SI) 설계에 강함
    * PCB/패키지 연결 모델링 용이
 
-🔹COMSOL Multiphysics**
+* COMSOL Multiphysics**
    * 고주파 모듈(HF Module)로 RF, 파동해석 가능
    * 구조-열-EM 다중물리 동시해석 가능
    * MRI 코일, 레이더, 전력전자 EMC 해석에 많이 사용됨
 
-🔹 Altair FEKO**
+* Altair FEKO**
    * 레이더 RCS, 조선/항공 레이더 산란 해석에 매우 강함
    * 대규모 안테나 배열 시뮬레이션에 매우 빠름
 
-🔹 EMPIRE XPU**
+* EMPIRE XPU**
    * GPU 기반 초고속 FDTD 솔버
    * 5G mmWave 대규모 어레이 안테나 해석에 특화
 
@@ -25,57 +25,60 @@
 
 * 필터, VCO, LNA, Mixer 등 RF 프론트엔드 회로 설계용
 
-🔹 Keysight ADS (Advanced Design System)
+* Keysight ADS (Advanced Design System)
    * 글로벌 RF 회로 설계 1위
    * PA/LNA/Filter/S-parameter 최적화 최강
    * Momentum 2.5D EM 포함 → PCB·MMIC 공정 해석 가능
    * 5G RFIC/MMIC 설계자 대부분 사용
 
-🔹 Cadence AWR Microwave Office
+* Cadence AWR Microwave Office
    * MMIC, RF PCB, 필터 설계용
    * Genesys보다 고급 설계 기능 풍부
    * EM Co-simulation 빠름(AWR AXIEM, Analyst EM)
 
-🔹 Cadence SpectreRF
+* Cadence SpectreRF
    * PLL, Mixer, VCO, ADC, 고주파 아날로그 IC용
    * PSS, PAC, PXF, Pnoise 등 고성능 RF 분석 가능
    * CMOS RFIC 설계 시 표준
 
 ## 🟧 3. PCB·패키지 SI/PI·고속 신호·커넥터 해석 툴
-🔹 Keysight EMPro
+
+* Keysight EMPro
    * ADS와 연동되는 3D EM 모델링
    * 패키지, 커넥터, 고속 인터페이스 해석용
 
-🔹 Cadence Sigrity
+* Cadence Sigrity
    * 고속 신호(SI), 전력 무결성(PI) 분석
    * DDR, PCIe, SerDes 설계에서 필수
 
-🔹 Ansys SIwave
+* Ansys SIwave
    * PCB·패키지 P/G 전력망, PI, SI 해석
    * HFSS와 강력 연동
 
 ## 🟨 4. 안테나 전용 시뮬레이터
-🔹 Altair WinProp
+
+* Altair WinProp
    * 전파 전파/커버리지 해석에 최강
    * 차량통신(V2X), 5G 빌딩 커버리지 설계
 
-🔹 GRASP (TICRA)
+* GRASP (TICRA)
    * 대형 위성 안테나, 반사경 안테나 설계 전문
    * 우주·안테나 회사에서 표준
 
 ## 🟫 5. 오픈소스·무료 EM 시뮬레이터
-🔹 OpenEMS
+
+* OpenEMS
    * FDTD 기반 완전 무료
    * Python 스크립트 기반 → 자동화 용이
 
-🔹 gprMax
+* gprMax
    * 지표 투과 레이더(GPR) 시뮬레이터
    * 지반 투과, 구조물 탐사용
 
-🔹 Sonnet Lite
+* Sonnet Lite
    * MMIC/PCB용 2.5D EM 툴 (무료 버전 존재)
 
-🔹 Qucs-S
+* Qucs-S
    * RF 회로 시뮬레이션 가능
    * SPICE 기반이지만 S-parameter 포함 가능
 
