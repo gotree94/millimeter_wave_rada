@@ -1115,11 +1115,14 @@ Pull Request와 Issue를 환영합니다!
 |RCS (Radar Cross Section)|보행자, 자전거, 차량 등 타겟별 반사 특성|
 
 ## 2. 주요 시뮬레이션 도구별 역할
+
 ### 2.1 ANSYS HFSS + HFSS SBR+
-가장 널리 사용되는 자동차 레이더 시뮬레이션 도구
+* 가장 널리 사용되는 자동차 레이더 시뮬레이션 도구
 
 |솔버|용도|시뮬레이션 규모|
-|HFSS FEM안테나 자체 설계, 레이돔/범퍼 영향 분석소형 (안테나 + 범퍼)HFSS SBR+전체 차량 + 도로 환경 시뮬레이션대형 (Full-scale Scene)
+|:--:|:--:|
+|HFSS FEM|안테나 자체 설계, 레이돔/범퍼 영향 분석|소형 (안테나 + 범퍼)|
+|HFSS SBR+|전체 차량 + 도로 환경 시뮬레이션|대형 (Full-scale Scene)|
 
 * HFSS SBR+ 주요 기능:
   * Ray Tracing: 77GHz에서 수백 파장 크기의 장면 시뮬레이션
@@ -1143,7 +1146,11 @@ Range-Doppler Map, Ghost Target 분석
 ### 2.2 Altair Feko + WinProp
    * 안테나 배치 최적화 및 Virtual Drive Test에 강점
 
-|도구용도Feko안테나 설계, RCS 계산, 레이돔 효과WinProp도시 환경 전파 전파, Virtual Drive Test
+|도구|용도|
+|:--:|:--:|
+|Feko|안테나 설계, RCS 계산, 레이돔 효과|
+|WinProp|도시 환경 전파 전파, Virtual Drive Test|
+
 
 * Virtual Drive Test:
    * 건물, 도로, 다른 차량을 포함한 환경에서 주행 시뮬레이션
