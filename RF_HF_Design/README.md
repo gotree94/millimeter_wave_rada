@@ -150,73 +150,54 @@ Qucs-S	무료	하	회로 시뮬레이션 입문용	S-parameter 처리 약함
 기본 수학 + 회로 + 파동 이론 확립 단계
 
 필요한 지식
-
 전자기학(Electromagnetics)
-
 회로이론(RLC, 필터)
-
 전송선로(Transmission Line)
-
 S-parameter, Smith Chart
-
 실습 툴
-
 Qucs-S / ADS Demo / AWR Demo / Sonnet Lite
-
 벡터네트워크분석기(VNA) 사용법 연습
 
-🟩 2단계: RF 회로 설계 실습 (6~12개월)
+## 🟩 2단계: RF 회로 설계 실습 (6~12개월)
 
 LNA, PA, Filter, Mixer 회로 설계 시작
 
 학습 대상
-
 Matching Network 설계
-
 최대 이득/최소 잡음 조건
-
 필터 설계 (Chebyshev, Elliptic)
-
 툴 활용
-
 ADS / AWR
-
 Momentum / AXIEM으로 2.5D EM Co-simulation
 
-🟧 3단계: 3D EM 해석 + PCB/패키지 설계 (1~2년차)
+## 🟧 3단계: 3D EM 해석 + PCB/패키지 설계 (1~2년차)
 
 실물이 동작하도록 구조 기반 EM 해석 능력 필요
 
 학습 내용
-
 안테나 기본 구조 (Patch, Helix, Array)
-
 EMI/EMC 개념
-
 PCB stack-up 설계
-
 BGA 패키지, Bonding, Via modeling
-
 사용 툴
-
 HFSS / CST / FEKO
-
 SIwave / Sigrity
 
-🟥 4단계: 고급 RF 시스템 (Radar / 5G / RFIC) (2~5년차)
+## 🟥 4단계: 고급 RF 시스템 (Radar / 5G / RFIC) (2~5년차)
+
 분야별 포커스
-분야	내용	필요 툴
-5G mmWave 설계	Beamforming, Massive MIMO	HFSS, CST, MATLAB
-자동차 레이더(77GHz)	FMCW Radar, RCS 분석	FEKO, HFSS
-RFIC	VCO/PLL/Mixer, Noise 분석	SpectreRF
-🟪 5단계: 전문가 수준 (5년 이상)
+
+|분야	|내용	|필요 툴|
+|:--:|:--:|:--:|
+|5G mmWave 설계	Beamforming, Massive MIMO	HFSS, CST, MATLAB
+|자동차 레이더(77GHz)	FMCW Radar, RCS 분석	FEKO, HFSS
+|RFIC	VCO/PLL/Mixer, Noise 분석	SpectreRF
+
+## 🟪 5단계: 전문가 수준 (5년 이상)
 
 고성능 PA 설계
-
 Ka-band 안테나 배열
-
 우주/항공 레이다
-
 RFIC Mixed-Signal SoC
 
 ✅ ③ 5G / 레이다 기반 RF 프로젝트 템플릿
@@ -224,6 +205,7 @@ RFIC Mixed-Signal SoC
 아래는 실제 회사에서 사용하는 RF 프로젝트 구성 템플릿 그대로입니다.
 
 📁 프로젝트 디렉토리 구조 (Template)
+```
 project_rf/
  ├── 01_spec/
  │    ├── system_requirement.md
@@ -250,84 +232,58 @@ project_rf/
  ├── 06_firmware/
  ├── 07_reports/
  └── README.md
+```
 
-📡 FMCW 레이다 프로젝트 템플릿
+## 📡 FMCW 레이다 프로젝트 템플릿
+
 1) System Requirements
-
-거리 분해능
-
-최대 탐지 거리
-
-Sweep bandwidth
-
-Tx Power / Rx Noise Figure
-
-FFT Size / CFAR 설정
+   * 거리 분해능
+   * 최대 탐지 거리
+   * Sweep bandwidth
+   * Tx Power / Rx Noise Figure
+   * FFT Size / CFAR 설정
 
 2) System Modeling
-
-MATLAB 기반 Radar Eq
-
-Beat Frequency 모델
-
-Range-Doppler map
-
-Clutter/Noise 모델
+   * MATLAB 기반 Radar Eq
+   * Beat Frequency 모델
+   * Range-Doppler map
+   * Clutter/Noise 모델
 
 3) RF Hardware
-
-VCO + PLL
-
-LNA (NF 최적화)
-
-Mixer
-
-IF 필터
-
-ADC 선택
+   * VCO + PLL
+   * LNA (NF 최적화)
+   * Mixer
+   * IF 필터
+   * ADC 선택
 
 4) EM Simulation
+   * Patch Array 안테나 설계 (24/77GHz)
+   * HFSS/CST로 S11/패턴 분석
+   * FEKO로 RCS 분석
 
-Patch Array 안테나 설계 (24/77GHz)
+## 📶 5G mmWave 프로젝트 템플릿
 
-HFSS/CST로 S11/패턴 분석
-
-FEKO로 RCS 분석
-
-📶 5G mmWave 프로젝트 템플릿
 1) Requirements
-
-28/39 GHz 대역 선택
-
-Beamforming 개수
-
-Array 구조 4×4, 8×8, 16×16
+   * 28/39 GHz 대역 선택
+   * Beamforming 개수
+   * Array 구조 4×4, 8×8, 16×16
 
 2) EM Simulation
-
-Patch or Slot Array
-
-Coupling 분석
-
-Feeding Network 설계
+   * Patch or Slot Array
+   * Coupling 분석
+   * Feeding Network 설계
 
 3) RF Front-End
-
-Phase Shifter
-
-PA/LNA
-
-Gain/Phase Calibration
+   * Phase Shifter
+   * PA/LNA
+   * Gain/Phase Calibration
 
 4) OTA Test
+   * Anechoic chamber
+   * EIRP/EIS
+   * Beam pattern 측정
 
-Anechoic chamber
-
-EIRP/EIS
-
-Beam pattern 측정
-
-✅ ④ HFSS / CST / ADS 예제 프로젝트 ZIP 구성안
+# ✅ ④ HFSS / CST / ADS 예제 프로젝트 ZIP 구성안
 
 지금 바로 ZIP 파일 생성 가능합니다.
 아래는 ZIP 내부 구성 예시입니다.
