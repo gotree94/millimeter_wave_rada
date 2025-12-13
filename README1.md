@@ -1,3 +1,199 @@
+# 1. 자율주행용 센서/시스템 기술 정리
+
+(특히 mmWave 레이더 + 이미지 센서 관점)
+
+## 1-1. 주요 센서/시스템 기술
+기술	원리/역할	장점	단점	성숙도 & 최신 동향
+mmWave 레이더 (24/77/79 GHz)	RF 신호를 쏘고 반사파를 측정해 거리·속도·각도 추출. 요즘은 77 GHz 3D/4D 이미징 레이더가 주류.
+EEWorld
++2
+Journal of Communications
++2
+	• 거리·속도 측정 정확, 악천후(비·안개·눈)에 강함 • 밤/눈부심 무관 • 가격이 LiDAR보다 저렴, 모듈이 작음	• 해상도가 카메라/LiDAR보다 낮음(특히 객체 분류) • 금속/큰 물체에 유리, 보행자/자전거 분류는 단독으론 어려움 • 간섭 문제(주파수 혼잡)	아주 성숙 (ACC, AEB 필수 센서). 77GHz로 통일되는 추세, 4D 이미징 레이더(고해상도 + 높이 정보)로 진화 중.
+Design Reuse
+
+이미지 센서 기반 카메라 (Mono/ Stereo/ Surround)	CMOS 이미지 센서로 2D/3D 영상 취득, DNN으로 차선·보행자·차량·표지판 인식	• 공간 해상도 높고 시각 정보(텍스처, 색상) 풍부 • 차선/표지판/신호등 등 규정 기반 인지 필수 • HW/렌즈 가격이 많이 내려감	• 빛 의존: 역광, 야간, 안개, 눈/비에서 성능 저하 • 눈/얼음/오염에 취약 • 연산량(SoC, GPU) 큼	매우 성숙 + 계속 진화 중. HDR, LED 플리커 억제, 야간용 NIR/IR, 차량용 CIS 시장 확대(onsemi, OmniVision, Sony 등)
+yolegroup.com
++1
+
+LiDAR	레이저 펄스의 TOF/위상으로 3D 포인트클라우드 생성	• 거리 정확도와 각도 해상도 최고 수준 • 복잡한 3D 환경 인지에 유리 • 카메라/레이더 보완	• 고가(단가 수백~수천달러→하락 추세) • 악천후/더스트에서 성능 저하 • 광학 윈도우 오염에 민감	기술적으로는 성숙에 가까우나 원가/패키징이 과제. Mercedes-Benz, Volvo 등 고급차/L3 이상에서 채택 확대, Luminar·Hesai·Innoviz 등 빠르게 성장.
+neuvition.com
++2
+6Wresearch
++2
+
+초음파 센서	수십 kHz 초음파 반사로 근거리(수십 cm) 장애물 탐지	• 아주 저렴, 주차·저속 근접검지에 효과적 • 금속/비금속 모두 측정 가능	• 거리/각도 해상도 낮음 • 고속/중·장거리 용도로 부적합	완전 성숙, 주차 보조용 표준. 고급 차에서는 레이더/카메라로 일부 대체 중.
+MDPI
+
+IMU + 차량 위치 센서(휠속, 조향각)	가속도/자이로 + 휠/조향 센서로 자세/궤적 추정	• 고속/단기 위치추정에 안정적 • GNSS/맵과 융합 시 정밀 로컬라이제이션에 핵심	• 드리프트 누적, 단독으론 사용 불가	성숙. 주행제어/ESP부터 필수. 고성능 MEMS + 소프트웨어로 정확도 계속 개선.
+MDPI
+
+GNSS (GPS/GLONASS/BeiDou 등)	위성 신호로 절대 위치 파악	• 전 지구 위치 파악, 고속도로 주행 등에서 필수	• 도심 캐니언, 터널 등에서 신호 불안정 • 단독 위치 정확도 제한(수 m)	RTK/PPP, 다중 GNSS, 고정밀 맵과의 융합으로 cm급까지 향상 중.
+MDPI
+
+V2X (V2V/V2I, DSRC/ C-V2X)	차량·인프라 간 통신으로 비가시 영역 정보 공유	• “보이지 않는 위협”(코너 뒤 차량 등) 탐지 가능 • 교차로 안전, 군집주행 등에 강점	• 인프라/보급률 의존, 보안/표준 문제 • 바로 상용화된 완전 자율주행 필수요소는 아님	일부 국가/도시에서 인프라 시험/초기 상용 단계. 장기적으로 센서 보조 수단.
+MDPI
+
+고정밀 HD 맵 + 로컬라이제이션	선행 계측된 고해상도 지도를 이용한 정밀 위치결정	• 차선 단위 위치, 구조물/신호 위치 정보 제공 • 센서 인지 부담 감소	• 갱신 비용, 도로 공사/변경에 취약 • 글로벌 서비스 확장 어려움	L3 이상/로보택시에서 중요. 최근에는 “맵 의존 감소” 트렌드(온라인 갱신 + 센서 기반 동적 지도)
+ScienceDirect
+
+센서 퓨전/Perception SW	위 센서들의 정보를 통합해 객체/차선/Free-space 인지	• 단일 센서의 한계를 보완 • 악천후/센서 장애에 대한 안전성(Functional Safety) 향상	• 아키텍처 복잡, 개발/검증 비용 큼 • 고성능 컴퓨팅 필요	최근 가장 뜨거운 영역. Kalman/Particle Filter + DNN 기반 딥퓨전까지 다양.
+MDPI
++1
+
+
+
+## 2. 실제 양산차 적용 예 (회사/기종, 센서 구성)
+완전한 리스트는 너무 방대하니, 대표 OEM + 대표 차종 + 센서 구성 위주로만 적겠습니다. (연식·트림에 따라 다를 수 있음)
+
+### 2-1. 카메라 + mmWave 레이더 기반 (LiDAR 비포함)
+* Toyota – Toyota Safety Sense (TSS)
+  * 센서: 전방 단안 카메라 + 전방 77 GHz 레이더, 후방/측방 레이더(차종에 따라).
+  * 주요 차종: Corolla, Camry, RAV4, Highlander, Prius, Lexus ES/UX/RX 등 대부분 신차.
+* Honda – Honda Sensing / AcuraWatch
+  * 센서: 전방 카메라 + 전방 레이더, 일부 차종은 코너 레이더.
+  * 차종: Civic, Accord, CR-V, HR-V, Odyssey, Acura RDX/TLX 등.
+* Hyundai·Kia – Hyundai SmartSense / Kia DriveWise
+  * 센서: 전방 카메라 + 장거리 레이더 + 코너 레이더 + 서라운드 뷰 카메라 등.
+  * 차종: Sonata, Grandeur, Tucson, Santa Fe, Ioniq 5/6, Kia EV6, Sportage 등 대다수.
+* Subaru – EyeSight
+  * 센서: 스테레오 카메라가 메인, 차종에 따라 레이더 추가.
+  * 차종: Forester, Outback, Legacy, Levorg 등.
+* Nissan – ProPILOT Assist
+  * 센서: 전방 카메라 + 레이더, 차선유지/ACC/혼잡주행 지원.
+  * 차종: Leaf, Rogue/X-Trail, Qashqai, Serena 등.
+  * 향후 계획: 2028년경 카메라 중심의 신규 자율주행 시스템을 Wayve와 개발·출시 예정(기본은 카메라, 일부 버전은 LiDAR 포함).
+* GM – Super Cruise / Ultra Cruise
+  * 센서: 카메라 + 레이더 + HD맵 (일부 고급차에서는 LiDAR 맵 데이터 사용).
+  * 차종: Cadillac CT4/CT5, Escalade, Chevy Silverado, GMC Sierra 등.
+* Ford – BlueCruise / Co-Pilot360
+  * 센서: 카메라 + 레이더 + 내부 운전자 모니터링 카메라.
+  * 차종: Mustang Mach-E, F-150, Explorer 등.
+* VW Group – Travel Assist / IQ.Drive
+  * 센서: 카메라 + 레이더 + 초음파.
+  * 차종: VW Golf, Passat, ID.4, Skoda, Audi의 여러 차종 등.
+* BYD – “신의 눈(God’s Eye)” L2+ ADAS
+  * 센서: 전방·측방 카메라 + 레이더 조합, 상위 트림에 더 많은 센서.
+  * 차종: Seagull 포함 20여개 모델에 기본/옵션으로 탑재.
+* Tesla – Autopilot / FSD
+  * 센서: 최근 플랫폼은 카메라만 사용하는 방향(“Tesla Vision”). 이전 세대는 전방 레이더를 병행 사용.
+  * AutoPilot Review
+
+### 2-2. 카메라 + 레이더 + LiDAR 기반 (주로 L3/L4 지향)
+* Mercedes-Benz – Drive Pilot (L3)
+  * 센서: 다중 카메라 + 여러 레이더 + 전방 LiDAR + 초음파 + 고정밀 맵.
+  * 차종: S-Class, EQS 일부 트림에 적용, 향후 확대 계획.
+* Volvo / Polestar
+  * 센서: Luminar LiDAR + 카메라 + 레이더 + 초음파 (Volvo EX90, Polestar 3 등).
+* 중국 OEM (NIO, XPeng, Li Auto, Huawei 협력 모델 등)
+  * 상위 트림에서 고해상도 LiDAR + 8~11 카메라 + 5 레이더 구성의 L2+/L3 준비.
+* Waymo, Cruise 등 로보택시
+  * 다수의 LiDAR + 카메라 + 레이더 + HD맵, 실질적인 L4 시스템.
+
+## 3. 관련 기술 벤더 (센서/칩/플랫폼 공급사)
+### 3-1. mmWave 레이더 칩/모듈·시스템 업체
+
+* 반도체/칩 수준
+  * Texas Instruments (TI) – AWR1xxx/2xxx/3xxx mmWave SoC (77 GHz radar)
+  * NXP – 77 GHz 레이더 트랜시버/MCU, 레이더 SoC, 레퍼런스 디자인
+  * Infineon, Analog Devices, Renesas, STMicroelectronics – 레이더 프론트엔드/트랜시버, 전력/아날로그 솔루션.
+* Tier-1 레이더 모듈 공급사 (실제 완성차에 들어가는 모듈)
+  * Bosch, Continental, Denso, Aptiv, ZF, Valeo, Hella(Forvia), Hyundai Mobis 등.
+
+### 3-2. 이미지 센서/카메라 모듈 공급사
+
+* 이미지 센서 칩 (CIS)
+  * onsemi – 자동차 이미지 센서 시장 점유율 1위 (약 40%)
+  * OmniVision – ADAS/서라운드뷰에서 빠르게 성장, 2위권.
+  * Sony – 고성능/고감도 센서(특히 고급차/서라운드 뷰) 공급.
+  * Samsung, STMicroelectronics 등도 자동차용 CIS 공급.
+
+* 카메라 모듈/시스템 업체
+  * Mobileye (Intel) – EyeQ SoC + 카메라 기반 ADAS/자율주행 스택, 많은 OEM에 공급.
+  * Aptiv, Bosch, Continental, Denso, ZF, Valeo, Hyundai Mobis – 전방 카메라/서라운드 카메라 모듈 및 ADAS ECU.
+
+### 3-3. LiDAR 벤더 (자동차용 중심)
+* Valeo (Scala LiDAR) – Audi 등 OEM 양산 적용.
+* Luminar – Volvo, Mercedes-Benz, SAIC 등과 파트너십 (Halo, Iris 등).
+* Innoviz, Velodyne/Ouster, Hesai, LeddarTech, Aeva, Aeye 등.
+
+### 3-4. 자율주행/ADAS SoC & 플랫폼 벤더
+* NVIDIA – DRIVE Orin / Thor : 고성능 GPU 기반 AV 컴퓨팅.
+* Qualcomm – Snapdragon Ride / Ride Flex : ADAS/인포테인먼트 통합 SoC.
+* Mobileye – EyeQ 시리즈 : 카메라 위주의 ADAS/AV SoC 및 소프트웨어 스택.
+* Tesla, Huawei, BYD 등 – 자체 설계 SoC 또는 커스텀 플랫폼.
+
+4. “제품”으로 제공되는 자율주행/ADAS 솔루션 업체
+
+여기서는 단순 센서칩이 아니라, 센서 + ECU + SW 묶음 또는 완성차에 통합된 모듈형 제품을 의미하는 쪽으로 정리해볼게요.
+
+4-1. Tier-1 ADAS 패키지
+
+Bosch – 전방 레이더, 코너 레이더, 카메라, ADAS ECU, ACC/AEB/차선유지 등 종합 패키지.
+
+Continental – 레이더/카메라/초음파/ADAS 컨트롤 유닛 패키지.
+
+Denso – 특히 일본 OEM(Toyota, Subaru 등)에 레이더/카메라 + ADAS ECU 공급.
+
+Valeo – Scala LiDAR 포함 ADAS/자율주행 센서 패키지.
+
+Aptiv – 레이더/카메라 모듈 + ADAS/자율주행 컴퓨트 플랫폼.
+
+ZF, Hyundai Mobis – 레이더/카메라/센서 퓨전 ECU 및 L2+ 시스템 공급.
+STMicroelectronics
++1
+
+이들 회사는 OEM 요구에 맞춰 **“카메라 + 레이더 + 소프트웨어”**까지 통합된 패키지를 제공하며, OEM은 이를 차종별로 튜닝·검증해서 양산 적용합니다.
+
+4-2. Vision 중심/Full-stack 자율주행 플랫폼
+
+Mobileye
+
+제품: EyeQ 기반 ADAS(차선유지·AEB·ACC)부터 SuperVision, Chauffeur 같은 고급 자율주행 스택.
+
+센서: 다중 카메라 + 레이더/LiDAR(옵션) + 고정밀 맵.
+LinkedIn
++1
+
+NVIDIA, Qualcomm
+
+HW + SW 스택(Perception, Planning, Control) 및 레퍼런스 아키텍처를 “플랫폼 제품” 형태로 OEM/티어1에 공급.
+Auto2XTech
++1
+
+Huawei, Baidu, Pony.ai, Momenta 등(주로 중국)
+
+고급 ADAS~L4 수준의 full-stack 자율주행 시스템을 특정 OEM에 패키지 공급.
+
+Waymo, Cruise 등 로보택시
+
+자체 센서 스택 + HD맵 + 클라우드까지 포함한 end-to-end 로보택시 플랫폼(일반 승용차용보다는 모빌리티 서비스용 제품).
+
+5. “mmWave 레이더 + 이미지 센서” 조합의 포지션 정리
+
+지금 산업의 기본 선택지
+
+L1~L2+ 수준(ACC, AEB, LKA, HDA 등)에서는
+→ 전방 카메라 + 전방 장거리 레이더 + 측방/후방 레이더 + 초음파 구성이 가격/성능/안전성 면에서 가장 합리적이라서, 대부분의 대중차가 이 구조를 채택하고 있습니다.
+MDPI
++1
+
+LiDAR는?
+
+고급 옵션 or L3 이상에서 안전 여유도 확보용으로 들어가는 추세(Volvo, Mercedes, 중국 하이엔드 EV 등).
+
+아직은 비용·패키징·세척 시스템 등의 부담이 있어서 전 차종 기본 구성이 되기에는 이른 상태.
+IDTechEx
++1
+
+카메라 only vs 멀티센서
+
+Tesla처럼 카메라 중심(레이다 제거) 접근도 있지만, 업계 전반에서는 카메라+레이더+기타 센서를 함께 쓰는 멀티센서/퓨전 구조가 안전·규제 측면에서 더 보수적인(=현실적인) 방향으로 평가됩니다.
+MDPI
++2
+ScienceDirect
++2
+
 # ✅ 1. L2+ ADAS 기준 완전한 시스템 블록도 (Full System Architecture)
 
 * L2+ ADAS는 센서 인지 → 객체 추적 → 센서 퓨전 → 행동 계획 → 궤적 생성 → 차량 제어까지의 전체 체계를 필요로 한다.
