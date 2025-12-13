@@ -101,51 +101,45 @@
 * Mobileye – EyeQ 시리즈 : 카메라 위주의 ADAS/AV SoC 및 소프트웨어 스택.
 * Tesla, Huawei, BYD 등 – 자체 설계 SoC 또는 커스텀 플랫폼.
 
-4. “제품”으로 제공되는 자율주행/ADAS 솔루션 업체
+### 4. “제품”으로 제공되는 자율주행/ADAS 솔루션 업체
 
 여기서는 단순 센서칩이 아니라, 센서 + ECU + SW 묶음 또는 완성차에 통합된 모듈형 제품을 의미하는 쪽으로 정리해볼게요.
 
-4-1. Tier-1 ADAS 패키지
+#### 4-1. Tier-1 ADAS 패키지
 
-Bosch – 전방 레이더, 코너 레이더, 카메라, ADAS ECU, ACC/AEB/차선유지 등 종합 패키지.
-
-Continental – 레이더/카메라/초음파/ADAS 컨트롤 유닛 패키지.
-
-Denso – 특히 일본 OEM(Toyota, Subaru 등)에 레이더/카메라 + ADAS ECU 공급.
-
-Valeo – Scala LiDAR 포함 ADAS/자율주행 센서 패키지.
-
-Aptiv – 레이더/카메라 모듈 + ADAS/자율주행 컴퓨트 플랫폼.
-
-ZF, Hyundai Mobis – 레이더/카메라/센서 퓨전 ECU 및 L2+ 시스템 공급.
-STMicroelectronics
-+1
+| 업체 | 주요 제공 제품/역할 | 센서 및 특징 |
+| :--- | :--- | :--- |
+| **Bosch** | ADAS ECU, ACC/AEB/차선유지 등 **종합 패키지** | 전방 레이더, 코너 레이더, 카메라, ADAS ECU 등 |
+| **Continental** | ADAS 컨트롤 유닛 패키지 | 레이더/카메라/초음파/ADAS 컨트롤 유닛 통합 |
+| **Denso** | 레이더/카메라 + ADAS ECU 공급 | 특히 **일본 OEM** (Toyota, Subaru 등)에 주력 공급 |
+| **Valeo** | ADAS/자율주행 센서 패키지 | **Scala LiDAR** 포함 센서 패키지 제공 |
+| **Aptiv** | ADAS/자율주행 컴퓨트 플랫폼 | 레이더/카메라 모듈 + 컴퓨트 플랫폼 |
+| **ZF, Hyundai Mobis** | L2+ 시스템 및 센서 퓨전 ECU | 레이더/카메라/센서 퓨전 ECU 및 L2+ 시스템 공급 |
+| **참고** | 이들 회사는 OEM 요구에 맞춰 **"카메라 + 레이더 + 소프트웨어"**까지 통합된 패키지를 제공하며, OEM은 이를 차종별로 튜닝·검증해서 양산 적용합니다. | |
 
 이들 회사는 OEM 요구에 맞춰 **“카메라 + 레이더 + 소프트웨어”**까지 통합된 패키지를 제공하며, OEM은 이를 차종별로 튜닝·검증해서 양산 적용합니다.
 
-4-2. Vision 중심/Full-stack 자율주행 플랫폼
+#### 4-2. Vision 중심/Full-stack 자율주행 플랫폼
 
-Mobileye
+| 업체 / 그룹 | 제품 형태 / 주요 역할 | 특징 |
+| :--- | :--- | :--- |
+| **Mobileye** | EyeQ 기반 ADAS부터 SuperVision, Chauffeur 같은 고급 자율주행 스택. | 다중 **카메라** + 레이더/LiDAR (옵션) + 고정밀 맵. **비전 인식**에 강점. |
+| **NVIDIA, Qualcomm** | HW + SW 스택 (Perception, Planning, Control) 및 레퍼런스 아키텍처. | **고성능 컴퓨팅 플랫폼** (HW + SW)을 OEM/티어1에 공급. |
+| **Huawei, Baidu, Pony.ai, Momenta 등** (주로 중국) | 고급 ADAS~L4 수준의 **Full-stack 자율주행 시스템** 패키지. | 특정 OEM에 Perception, Planning, Control을 포함한 시스템을 패키지 공급. |
+| **Waymo, Cruise 등** (로보택시) | End-to-end **로보택시 플랫폼** (모빌리티 서비스용 제품). | 자체 **센서 스택** + **HD맵** + **클라우드**까지 포함. |
 
-제품: EyeQ 기반 ADAS(차선유지·AEB·ACC)부터 SuperVision, Chauffeur 같은 고급 자율주행 스택.
+---
 
-센서: 다중 카메라 + 레이더/LiDAR(옵션) + 고정밀 맵.
-LinkedIn
-+1
+### 5. “mmWave 레이더 + 이미지 센서” 조합의 포지션 정리
 
-NVIDIA, Qualcomm
+| 항목 | 내용 |
+| :--- | :--- |
+| **산업의 기본 선택지** | **L1~L2+ 수준** (ACC, AEB, LKA, HDA 등)에서는 전방 **카메라 + 전방 장거리 레이더 + 측방/후방 레이더 + 초음파** 구성이 **가격/성능/안전성** 면에서 가장 합리적이며, 대부분의 대중차가 이 구조를 채택.  |
+| **LiDAR의 역할** | 고급 옵션 또는 **L3 이상**에서 안전 여유도 확보용으로 들어가는 추세 (Volvo, Mercedes, 중국 하이엔드 EV 등). |
+| **LiDAR의 현주소** | 아직은 **비용·패키징·세척 시스템** 등의 부담이 커서 전 차종 기본 구성이 되기에는 이른 상태. |
+| **카메라 only vs 멀티센서** | Tesla처럼 카메라 중심(레이더 제거) 접근도 있지만, 업계 전반에서는 **카메라+레이더+기타 센서**를 함께 쓰는 **멀티센서/퓨전 구조**가 안전·규제 측면에서 더 보수적이고 현실적인 방향으로 평가됨. |
 
-HW + SW 스택(Perception, Planning, Control) 및 레퍼런스 아키텍처를 “플랫폼 제품” 형태로 OEM/티어1에 공급.
-Auto2XTech
-+1
 
-Huawei, Baidu, Pony.ai, Momenta 등(주로 중국)
-
-고급 ADAS~L4 수준의 full-stack 자율주행 시스템을 특정 OEM에 패키지 공급.
-
-Waymo, Cruise 등 로보택시
-
-자체 센서 스택 + HD맵 + 클라우드까지 포함한 end-to-end 로보택시 플랫폼(일반 승용차용보다는 모빌리티 서비스용 제품).
 
 5. “mmWave 레이더 + 이미지 센서” 조합의 포지션 정리
 
