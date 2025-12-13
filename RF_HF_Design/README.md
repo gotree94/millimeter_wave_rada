@@ -116,10 +116,10 @@
 
 |Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|Ansys HFSS	|매우 높음	|중~상|	정확도 최고, 5G/안테나 표준, 구조 기반 최적	|비쌈, 큰 모델 느림	|안테나, 패키지, RF 구조물|
-|CST Studio Suite	|매우 높음	|중|	Time-domain solver 빨라서 대규모 시뮬레이션 강함	|Geometry 설정이 HFSS보다 복잡	|EMI/EMC, 안테나, SI|
+|Ansys HFSS	|매우 높음|중 ~ 상|	정확도 최고, 5G/안테나 표준, 구조 기반 최적	|비쌈, 큰 모델 느림	|안테나, 패키지, RF 구조물|
+|CST Studio Suite	|매우 높음|중|	Time-domain solver 빨라서 대규모 시뮬레이션 강함	|Geometry 설정이 HFSS보다 복잡	|EMI/EMC, 안테나, SI|
 |Altair FEKO	|높음|	중|	RCS/레이더/대형 배열 최강	|GUI 난이도 중간	|레이더, 위성, RCS|
-|COMSOL HF Module	|높음	|중~상|	구조·열·전기 다중물리 동시 분석 가능	|RF 회로 쪽 기능 약함	|MRI, RF heating, 고급 물리|
+|COMSOL HF Module	|높음	|중 ~ 상|	구조·열·전기 다중물리 동시 분석 가능	|RF 회로 쪽 기능 약함	|MRI, RF heating, 고급 물리|
 
 ## ✔ RF 회로 및 2.5D EM (필터·LNA·PA 설계 중심)
 
