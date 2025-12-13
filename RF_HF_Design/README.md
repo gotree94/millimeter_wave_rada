@@ -107,7 +107,8 @@
 # ✅ ① RF 설계 툴 비교표 (비용/난이도/장단점 총정리)
 
 <img width="800" height="800" alt="1754913280013" src="https://github.com/user-attachments/assets/191d5ae1-aca4-435b-9e87-f96ce01ff550" />
-<img width="720" height="405" alt="001" src="https://github.com/user-attachments/assets/358544aa-94b4-46df-9d16-691e400cded6" />
+
+<img width="725" height="241" alt="Comparison-between-FEKO-and-HFSS" src="https://github.com/user-attachments/assets/43aba72d-29f7-4b36-9b4b-292a3535ac38" />
 
 
 #📌 RF/EM Simulation Tools 비교표
