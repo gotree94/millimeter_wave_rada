@@ -1272,4 +1272,5 @@ Step 5: Corner Case 검증 (AWS HPC)
 |:--:|:--:|
 |AWS, ANSYS, Altair로 안테나 위치/감지거리 예측 가능?|✅ 가능 - 업계 표준 방식|
 |자동차 회사는 어떻게?|시뮬레이션 + 실차 테스트 병행, Tier-1과 협력|
-자동차 레이더 개발은 "시뮬레이션 우선 (Simulation-First)" 접근법이 표준이 되었고, ANSYS HFSS SBR+와 Altair Feko가 가장 많이 사용되며, 대규모 시나리오 검증에는 AWS 같은 클라우드 HPC가 활용됩니다.
+
+* 자동차 레이더 개발은 "시뮬레이션 우선 (Simulation-First)" 접근법이 표준이 되었고, ANSYS HFSS SBR+와 Altair Feko가 가장 많이 사용되며, 대규모 시나리오 검증에는 AWS 같은 클라우드 HPC가 활용됩니다.
