@@ -118,17 +118,13 @@ Millimeter-Wave Radar + Image Sensor 기반 ADAS / 자율주행 기술 정리
 
 # 3. 기술 공급 업체(센서·칩·플랫폼 벤더)
 
-## Radar 칩
-TI, NXP, Infineon, ADI, Renesas, ST
+## Radar 칩 : TI, NXP, Infineon, ADI, Renesas, ST
 
-## Camera CIS
-onsemi, OmniVision, Sony, Samsung
+## Camera CIS : onsemi, OmniVision, Sony, Samsung
 
-## LiDAR
-Luminar, Hesai, Innoviz, Ouster
+## LiDAR : Luminar, Hesai, Innoviz, Ouster
 
-## ADAS/AV SoC
-NVIDIA Orin/Thor, Qualcomm Ride, Mobileye EyeQ, Huawei MDC
+## ADAS/AV SoC : NVIDIA Orin/Thor, Qualcomm Ride, Mobileye EyeQ, Huawei MDC
 
 ---
 
