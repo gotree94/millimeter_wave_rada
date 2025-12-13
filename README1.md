@@ -7,14 +7,15 @@
 
 ### 센서 종류 및 역할:
 
-**센서	주요 역할	특징**
-- Front Camera	객체, 차선, 신호등 인식	DNN 기반 인지 핵심
-- Long-Range Radar (LRR)	거리·속도 추정, ACC/AEB	악천후 강함, 거리 정확
-- Corner Radar (SRR/MRR)	BSD, LCA, 교차로 감시	FOV 넓음
-- Surround Camera	360° 인지(후방, 측방)	차선 변경/후방 안전
-- Ultrasonic	근거리 주차 및 저속 장애물	0–5m
-- GNSS + IMU	차량 절대/상대 위치	Dead-reckoning
-- LiDAR (옵션)	고정밀 3D 인지	L3 이상에서 중요
+|센서	|주요 역할	|특징|
+|---------|---------|---------|
+|Front Camera	|객체, 차선, 신호등 인식|	DNN 기반 인지 핵심|
+|Long-Range Radar (LRR)	|거리·속도 추정, ACC/AEB	|악천후 강함, 거리 정확|
+|Corner Radar (SRR/MRR)	|BSD, LCA, 교차로 감시	|FOV 넓음|
+|Surround Camera	|360° 인지(후방, 측방)	|차선 변경/후방 안전|
+|Ultrasonic	|근거리 주차 및 저속 장애물	|0–5m|
+|GNSS + IMU	|차량 절대/상대 위치	|Dead-reckoning|
+|LiDAR (옵션)	|고정밀 3D 인지	|L3 이상에서 중요|
 
 ## 📌 Layer 2: Perception Layer (Sensor Processing)
 
