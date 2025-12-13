@@ -125,9 +125,9 @@
 
 |Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|Keysight ADS	매우 높음	중	PA/LNA/필터 산업 표준, Momentum 2.5D EM 포함	고가, 시스템 모델링은 별도	RF PCB, PA/LNA, MMIC
-|Cadence AWR Microwave Office	중~높음	중	ADS보다 빠른 Co-sim, MMIC·필터 중심	패키지/보드 연계는 ADS보다 약함	MMIC, RF PCB
-|Cadence SpectreRF	매우 높음	상	RFIC(PLL/VCO/Mixer) 분석 최고	회로 중심, EM 기능 없음	CMOS RFIC
+|Keysight ADS	|매우 높음	|중	|PA/LNA/필터 산업 표준, Momentum 2.5D EM 포함	|고가, 시스템 모델링은 별도 |	RF PCB, PA/LNA, MMIC|
+|Cadence AWR Microwave Office	|중~높음	|중	|ADS보다 빠른 Co-sim, MMIC·필터 중심	|패키지/보드 연계는 ADS보다 약함	|MMIC, RF PCB|
+|Cadence SpectreRF	|매우 높음	|상	|RFIC(PLL/VCO/Mixer) 분석 최고	|회로 중심, EM 기능 없음	|CMOS RFIC|
 
 ## ✔ PCB/패키지 SI/PI 툴
 
