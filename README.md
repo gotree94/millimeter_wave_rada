@@ -1103,9 +1103,16 @@ Pull Request와 Issue를 환영합니다!
 # 자동차 레이더 안테나 배치 시뮬레이션
 
 ## 1. 시뮬레이션으로 예측 가능한 것들
+
 | 예측 항목 | 설명|
+|:--:|:--:|
 |감지 거리 (Detection Range) | 범퍼/레이돔 투과 손실 고려한 실제 감지 거리|
-방사 패턴 왜곡범퍼/파샤가 안테나 빔 패턴에 미치는 영향각도 분해능 (Angular Resolution)AoA (Angle of Arrival) 정확도Ghost Target다중 경로 반사로 인한 허위 타겟 발생 위치사각지대 (Blind Spot)차량 형상으로 인한 감지 불가 영역간섭 (Interference)레이더 간 상호 간섭, EMI/EMCRCS (Radar Cross Section)보행자, 자전거, 차량 등 타겟별 반사 특성
+|방사 패턴 왜곡|범퍼/파샤가 안테나 빔 패턴에 미치는 영향|
+|각도 분해능 (Angular Resolution)|AoA (Angle of Arrival) 정확도|
+|Ghost Target|다중 경로 반사로 인한 허위 타겟 발생 위치|
+|사각지대 (Blind Spot)|차량 형상으로 인한 감지 불가 영역|
+|간섭 (Interference)|레이더 간 상호 간섭, EMI/EMC|
+|RCS (Radar Cross Section)|보행자, 자전거, 차량 등 타겟별 반사 특성|
 
 ## 2. 주요 시뮬레이션 도구별 역할
 ### 2.1 ANSYS HFSS + HFSS SBR+
