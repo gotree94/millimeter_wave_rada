@@ -157,39 +157,39 @@
 
 기본 수학 + 회로 + 파동 이론 확립 단계
 
-필요한 지식
-전자기학(Electromagnetics)
-회로이론(RLC, 필터)
-전송선로(Transmission Line)
-S-parameter, Smith Chart
-실습 툴
-Qucs-S / ADS Demo / AWR Demo / Sonnet Lite
-벡터네트워크분석기(VNA) 사용법 연습
+* 필요한 지식
+  * 전자기학(Electromagnetics)
+  * 회로이론(RLC, 필터)
+  * 전송선로(Transmission Line)
+  * S-parameter, Smith Chart
+* 실습 툴
+  * Qucs-S / ADS Demo / AWR Demo / Sonnet Lite
+  * 벡터네트워크분석기(VNA) 사용법 연습
 
 ## 🟩 2단계: RF 회로 설계 실습 (6~12개월)
 
 LNA, PA, Filter, Mixer 회로 설계 시작
 
-학습 대상
-Matching Network 설계
-최대 이득/최소 잡음 조건
-필터 설계 (Chebyshev, Elliptic)
-툴 활용
-ADS / AWR
-Momentum / AXIEM으로 2.5D EM Co-simulation
+* 학습 대상
+  * Matching Network 설계
+  * 최대 이득/최소 잡음 조건
+  * 필터 설계 (Chebyshev, Elliptic)
+* 툴 활용
+  * ADS / AWR
+  * Momentum / AXIEM으로 2.5D EM Co-simulation
 
 ## 🟧 3단계: 3D EM 해석 + PCB/패키지 설계 (1~2년차)
 
 실물이 동작하도록 구조 기반 EM 해석 능력 필요
 
-학습 내용
-안테나 기본 구조 (Patch, Helix, Array)
-EMI/EMC 개념
-PCB stack-up 설계
-BGA 패키지, Bonding, Via modeling
-사용 툴
-HFSS / CST / FEKO
-SIwave / Sigrity
+* 학습 내용
+  * 안테나 기본 구조 (Patch, Helix, Array)
+  * EMI/EMC 개념
+  * PCB stack-up 설계
+  * BGA 패키지, Bonding, Via modeling
+* 사용 툴
+  * HFSS / CST / FEKO
+  * SIwave / Sigrity
 
 ## 🟥 4단계: 고급 RF 시스템 (Radar / 5G / RFIC) (2~5년차)
 
