@@ -285,11 +285,10 @@ project_rf/
 
 # ✅ ④ HFSS / CST / ADS 예제 프로젝트 ZIP 구성안
 
-지금 바로 ZIP 파일 생성 가능합니다.
-아래는 ZIP 내부 구성 예시입니다.
+## 📦 ZIP 파일 구성
 
-📦 ZIP 파일 구성
 🔹 HFSS 예제 (24GHz Patch Antenna)
+```
 hfss_patch_24g/
  ├── patch_24g.aedt
  ├── scripts/
@@ -298,22 +297,27 @@ hfss_patch_24g/
  │     ├── s11_plot.png
  │     └── radiation_pattern.png
  └── README.md
+```
 
 🔹 CST 예제 (77GHz Radar Array)
+```
 cst_array_77g/
  ├── array_77g.cst
  ├── feed_network/
  ├── simulation_results/
  └── README.md
+```
 
 🔹 ADS 예제 (LNA + Matching Network)
-ads_lna_design/
+
+```ads_lna_design/
  ├── lna_wrk/
  ├── s_params/
  │     └── transistor.s2p
  ├── optimization_goals.dsn
  ├── momentum_em/
  └── README.md
+```
 
 ```
 rf_tool_examples/
