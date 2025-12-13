@@ -139,6 +139,11 @@ Qucs-S	무료	하	회로 시뮬레이션 입문용	S-parameter 처리 약함
 
 # ✅ ② RF 설계자의 로드맵 (기초 → 실무 → 전문 수준)
 
+
+<img width="500" height="500" alt="5daef5db85b55f1902448149_info" src="https://github.com/user-attachments/assets/e1ebadcb-d683-460e-aaf9-5850f25ca4a2" />
+<img width="1200" height="628" alt="antenna-integration-and-RF-design-guidelines-for-5G-PCBs-featured-image" src="https://github.com/user-attachments/assets/ed5c195f-2ca0-4f21-abbc-e6fc34f9c0a1" />
+
+
 아래는 RF 엔지니어 커리어 패스 기준으로 정리한 실질적인 로드맵입니다.
 
 ## 🟦 1단계: 기초 다지기 (0~6개월)
