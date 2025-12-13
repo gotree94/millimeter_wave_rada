@@ -113,28 +113,36 @@
 # 📌 RF/EM Simulation Tools 비교표
 
 ## ✔ Full-Wave 3D EM 시뮬레이터 (안테나·EMI·레이더 중심)
-Tool	비용 수준	난이도	장점	단점	주용도
-Ansys HFSS	매우 높음	중~상	정확도 최고, 5G/안테나 표준, 구조 기반 최적	비쌈, 큰 모델 느림	안테나, 패키지, RF 구조물
-CST Studio Suite	매우 높음	중	Time-domain solver 빨라서 대규모 시뮬레이션 강함	Geometry 설정이 HFSS보다 복잡	EMI/EMC, 안테나, SI
-Altair FEKO	높음	중	RCS/레이더/대형 배열 최강	GUI 난이도 중간	레이더, 위성, RCS
-COMSOL HF Module	높음	중~상	구조·열·전기 다중물리 동시 분석 가능	RF 회로 쪽 기능 약함	MRI, RF heating, 고급 물리
+
+|Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Ansys HFSS	|매우 높음	|중~상|	정확도 최고, 5G/안테나 표준, 구조 기반 최적	|비쌈, 큰 모델 느림	|안테나, 패키지, RF 구조물|
+|CST Studio Suite	|매우 높음	|중|	Time-domain solver 빨라서 대규모 시뮬레이션 강함	|Geometry 설정이 HFSS보다 복잡	|EMI/EMC, 안테나, SI|
+|Altair FEKO	|높음|	중|	RCS/레이더/대형 배열 최강	|GUI 난이도 중간	|레이더, 위성, RCS|
+|COMSOL HF Module	|높음	|중~상|	구조·열·전기 다중물리 동시 분석 가능	|RF 회로 쪽 기능 약함	|MRI, RF heating, 고급 물리|
 
 ## ✔ RF 회로 및 2.5D EM (필터·LNA·PA 설계 중심)
-Tool	비용	난이도	장점	단점	주용도
-Keysight ADS	매우 높음	중	PA/LNA/필터 산업 표준, Momentum 2.5D EM 포함	고가, 시스템 모델링은 별도	RF PCB, PA/LNA, MMIC
-Cadence AWR Microwave Office	중~높음	중	ADS보다 빠른 Co-sim, MMIC·필터 중심	패키지/보드 연계는 ADS보다 약함	MMIC, RF PCB
-Cadence SpectreRF	매우 높음	상	RFIC(PLL/VCO/Mixer) 분석 최고	회로 중심, EM 기능 없음	CMOS RFIC
+
+|Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Keysight ADS	매우 높음	중	PA/LNA/필터 산업 표준, Momentum 2.5D EM 포함	고가, 시스템 모델링은 별도	RF PCB, PA/LNA, MMIC
+|Cadence AWR Microwave Office	중~높음	중	ADS보다 빠른 Co-sim, MMIC·필터 중심	패키지/보드 연계는 ADS보다 약함	MMIC, RF PCB
+|Cadence SpectreRF	매우 높음	상	RFIC(PLL/VCO/Mixer) 분석 최고	회로 중심, EM 기능 없음	CMOS RFIC
 
 ## ✔ PCB/패키지 SI/PI 툴
-Tool	비용	난이도	장점	단점	주용도
-Ansys SIwave	높음	중	PCB·패키지 SI/PI 강력, HFSS 연동	PCB 중심	DDR, SerDes
-Cadence Sigrity	매우 높음	상	업계 표준 SI/PI, 패키지 최강	고가, 난이도 높음	고속 인터페이스
+
+|Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Ansys SIwave	높음	중	PCB·패키지 SI/PI 강력, HFSS 연동	PCB 중심	DDR, SerDes
+|Cadence Sigrity	매우 높음	상	업계 표준 SI/PI, 패키지 최강	고가, 난이도 높음	고속 인터페이스
 
 ## ✔ 무료/오픈소스
-Tool	비용	난이도	장점	단점
-Sonnet Lite	무료	중	2.5D EM, MMIC 학습용 최고	사이즈 제한
-OpenEMS	무료	중~상	Python 자동화 가능	GUI 부족
-Qucs-S	무료	하	회로 시뮬레이션 입문용	S-parameter 처리 약함
+
+|Tool	|비용 수준	|난이도	|장점	|단점	|주용도|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|Sonnet Lite	무료	중	2.5D EM, MMIC 학습용 최고	사이즈 제한
+|OpenEMS	무료	중~상	Python 자동화 가능	GUI 부족
+|Qucs-S	무료	하	회로 시뮬레이션 입문용	S-parameter 처리 약함
 
 # ✅ ② RF 설계자의 로드맵 (기초 → 실무 → 전문 수준)
 
