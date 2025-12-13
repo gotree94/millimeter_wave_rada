@@ -3,7 +3,7 @@
 ## 🟦 1. 구조 기반 전자기(EM) Full-Wave 시뮬레이터
 * 안테나, 패키지, 고속 인터커넥트, 파워 인티그리티 등 3D 모델 기반 시뮬레이션용
 
-🔹 CST Studio Suite (Dassault Systemes)
+*🔹 CST Studio Suite (Dassault Systemes)
    * HFSS와 더불어 업계 표준 2대장
    * Time-domain solver 빨라서 안테나/EMI/신호 무결성(SI) 설계에 강함
    * PCB/패키지 연결 모델링 용이
