@@ -3,22 +3,21 @@
 ## 🟦 1. 구조 기반 전자기(EM) Full-Wave 시뮬레이터
 * 안테나, 패키지, 고속 인터커넥트, 파워 인티그리티 등 3D 모델 기반 시뮬레이션용
 
-### 🔹CST Studio Suite (Dassault Systemes)
-
+🔹CST Studio Suite (Dassault Systemes)
    * HFSS와 더불어 업계 표준 2대장
    * Time-domain solver 빨라서 안테나/EMI/신호 무결성(SI) 설계에 강함
    * PCB/패키지 연결 모델링 용이
 
-**🔹COMSOL Multiphysics**
+🔹COMSOL Multiphysics**
    * 고주파 모듈(HF Module)로 RF, 파동해석 가능
    * 구조-열-EM 다중물리 동시해석 가능
    * MRI 코일, 레이더, 전력전자 EMC 해석에 많이 사용됨
 
-**🔹 Altair FEKO**
+🔹 Altair FEKO**
    * 레이더 RCS, 조선/항공 레이더 산란 해석에 매우 강함
    * 대규모 안테나 배열 시뮬레이션에 매우 빠름
 
-**🔹 EMPIRE XPU**
+🔹 EMPIRE XPU**
    * GPU 기반 초고속 FDTD 솔버
    * 5G mmWave 대규모 어레이 안테나 해석에 특화
 
