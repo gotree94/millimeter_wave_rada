@@ -1196,8 +1196,9 @@ Range-Doppler Map, Ghost Target 분석
    * 시뮬레이션으로 빔 패턴 최적화
 
 ### 3.3 OEM의 레이더 배치 전략
+
 |위치|센서 타입|주파수|주요 기능|
-|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|
 |전방 (엠블럼 뒤)|Long-Range Radar|77GHz|ACC, AEB|
 |전방 코너|Corner Radar|77GHz|BSD, LCA|
 |후방 코너|Corner Radar|77GHzR|CTA, RCW|
