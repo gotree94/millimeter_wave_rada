@@ -572,7 +572,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 ### 1.1 하드웨어 제공 솔루션
 
 | 제품명 | 주파수 | 칩셋 | 안테나 | 프로세서 | 타겟 시장 |
-|--------|--------|------|--------|----------|-----------|
+|:------------:|:----------:|:----------:|:----------:|:------------:|:---------------:|
 | **AWR1642BOOST** | 76-81GHz | AWR1642 | 외장 PCB | C674x DSP + ARM R4F | Automotive |
 | **AWR6843ISK** | 60-64GHz | AWR6843 | 외장 Long-range | C674x DSP + ARM R4F | Automotive |
 | **AWR6843AOPEVM** | 60-64GHz | AWR6843AOP | AoP (Antenna on Package) | C674x DSP + ARM R4F | Automotive |
@@ -583,7 +583,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 ### 1.2 소프트웨어 생태계
 
 | SDK/도구 | 지원 보드 | 주요 기능 |
-|----------|-----------|-----------|
+|:----------:|:-----------:|:-----------:|
 | **MMWAVE-SDK** | AWR1642BOOST, AWR6843ISK, AWR6843AOPEVM | 레이더 신호처리, Out-of-box Demo, Code Composer Studio 지원 |
 | **MMWAVE-L-SDK** | IWRL6432BOOST, IWRL6432AOPEVM, AWRL6844EVM | 저전력 모드, Motion/Presence Detection Demo, FreeRTOS 지원 |
 | **MMWAVE-MCUPLUS-SDK** | 전체 TI 보드 | MCU+ 확장 기능 |
@@ -601,7 +601,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 #### 자동차 자율주행 / ADAS
 
 | 애플리케이션 | 추천 솔루션 | 이유 |
-|--------------|-------------|------|
+|:--------------:|:-------------:|:------:|
 | 장거리 레이더 (ACC, AEB) | AWR1642BOOST | 76-81GHz, 200m+ 검출, ISO 26262 ASIL-B |
 | 코너 레이더 (BSD, LCA) | AWR6843ISK | 60-64GHz, 넓은 FOV, 높은 각도 분해능 |
 | 주차 보조 | AWR6843AOPEVM | AoP로 소형화, 근거리 고정밀 |
@@ -610,7 +610,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 #### 차량 실내 감지 (In-Cabin)
 
 | 애플리케이션 | 추천 솔루션 | 이유 |
-|--------------|-------------|------|
+|:--------------:|:-------------:|:------:|
 | Child Presence Detection (CPD) | AWRL6844EVM | Edge AI, 저전력, 3-in-1 기능 |
 | Seat Belt Reminder | AWRL6844EVM | 승객 감지 + 위치 파악 |
 | Driver Monitoring (DMS) | AWR6843AOPEVM | Vital Signs 감지 (심박, 호흡) |
@@ -619,7 +619,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 #### 산업용 / 스마트 빌딩
 
 | 애플리케이션 | 추천 솔루션 | 이유 |
-|--------------|-------------|------|
+|:--------------:|:-------------:|:------:|
 | People Counting | IWRL6432BOOST | 저전력, Point Cloud, 배터리 동작 가능 |
 
 ### 링크
@@ -636,7 +636,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 ### 2.1 하드웨어 제공 솔루션
 
 | 제품군 | 주파수 | 주요 제품 | 개발 키트 | 타겟 시장 |
-|--------|--------|-----------|-----------|-----------|
+|:--------:|:--------:|:-----------:|:-----------:|:-----------:|
 | **RASIC™** | 77/79GHz | RXS8160PL (3T4R) | CARKIT 2C3 (8T8R 4D Radar) | Automotive ADAS |
 | **XENSIV™ 60GHz** | 60GHz | BGT60TR13C (1T3R, AiP) | DEMO-BGT60TR13C, KIT-CSK-BGT60TR13C | Industrial/IoT |
 | **XENSIV™ 24GHz** | 24GHz | BGT24LTR11 | SENSE2GOL PULSE | Industrial |
@@ -651,7 +651,7 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 ### 2.2 소프트웨어 생태계
 
 | SDK/도구 | 지원 보드 | 주요 기능 |
-|----------|-----------|-----------|
+|:----------:|:-----------:|:-----------:|
 | **Radar Development Kit (RDK)** | BGT60TR13C, BGT60ATR24C | C/C++, Python, MATLAB API 지원 |
 | **Radar Fusion GUI** | 전체 XENSIV 보드 | Presence Sensing, Range & Angle, Segmentation & Tracking |
 | **ModusToolbox™** | PSoC 기반 보드 | 통합 개발환경, BSP 제공 |
@@ -673,14 +673,14 @@ $$P_{avg} = P_{active} \cdot \frac{t_{active}}{t_{total}} + P_{sleep} \cdot \fra
 #### 자동차 ADAS
 
 | 애플리케이션 | 추천 솔루션 | 이유 |
-|--------------|-------------|------|
+|:--------------:|:-------------:|:------|
 | 4D 이미징 레이더 | CARKIT 2C3 (8T8R) | 고해상도, ISO 26262 ASIL-D |
 | 코너/프론트 레이더 | RASIC 77GHz + AURIX TC3xx | 250m 검출, 높은 확장성 |
 
 #### 산업용 / 스마트 빌딩
 
 | 애플리케이션 | 추천 솔루션 | 이유 |
-|--------------|-------------|------|
+|:--------------:|:-------------:|:------:|
 | 실내 존재 감지 | DEMO-BGT60TR13C | 0.2~20.9m, Micro-motion 감지 |
 | 스마트 조명/HVAC | KIT-CSK-BGT60TR13C | PSoC6 통합, 클라우드 연결 |
 | 제스처 인식 | BGT60TR13C | L-shaped 배열로 각도 측정 |
