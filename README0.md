@@ -57,33 +57,62 @@ Millimeter-Wave Radar + Image Sensor 기반 ADAS / 자율주행 기술 정리
    * 성숙도: ★★★★★
 
 ## 1.3 LiDAR
-고해상도 3D 인지, 고가/악천후 취약  
-성숙도: ★★★★☆
+* 장점:
+  * 정확하고 고해상도 3D 포인트 클라우드
+  * 정밀 지도 기반 로컬라이제이션에 강함
+* 단점:
+  * 가격 높음 (단가 수백~수천 USD → 하락 중)
+  * 오염/악천후에 취약
+* 성숙도: ★★★★☆ (고급차/플래그십에서 채택 중)
 
 ## 1.4 초음파 센서
-주차/근거리 탐지 용도, 매우 성숙
+* 용도: 주차, 근거리 장애물 탐지
+* 특징: 저가, 근거리 특화, 이미 시장 성숙
 
 ## 1.5 IMU / 로컬라이제이션
-Dead-reckoning, 고성능 MEMS 필요
+* 가속도/자이로 + 차량 속도/조향 기반 자세 계산
+* GNSS 신호 없을 때 Dead-reckoning 역할
+* 고성능 MEMS + Fusion 알고리즘이 핵심
 
 ## 1.6 GNSS
-RTK/PPP 기반 cm급 가능, 도심 취약
+* 기본 위치 제공
+* RTK/PPP 기반 → cm 단위까지 가능
+* 도심/터널에서는 신호 불안정
 
-## 1.7 V2X 통신
-비가시 영역 보조, 인프라 의존
+## 1.7 V2X 통신 (C-V2X / DSRC)
+* 차량 간/차량-인프라 간 통신
+* “비가시 영역” 위험 탐지 가능
+* 인프라 보급률이 낮아 단독 활용 어려움
 
-## 1.8 HD Map 및 센서 퓨전
-정밀 위치 추정, 최신 자율주행 핵심
+## 1.8 HD Map 및 센서 퓨전 SW
+* 정밀 지도 기반 차선 단위 위치 추정
+* 센서 + 지도 + DNN 기반 Deep Fusion이 최신 방향
+* ISO 26262 기반 기능 안전 요구
 
 ---
 
 # 2. 자동차 회사별 센서 구성 및 적용 예
+## 🚗 카메라 + Radar 조합 (대부분의 양산차 기본 구조)
 
-## 카메라 + Radar 기반 (대부분 양산차)
-Toyota TSS / Honda Sensing / Hyundai-Kia SmartSense / Nissan ProPILOT / GM Super Cruise / Ford BlueCruise / VW IQ.Drive / BYD L2+ / Tesla Vision
+| 제조사	| 대표 시스템	| 센서 구성	| 대표 차종| 
+|:----:|:----:|:----:|:----:|
+| Toyota	|TSS	|단안 카메라 + 전방 레이더	|Corolla, Camry, RAV4, Prius|
+| Honda	|Honda Sensing	|카메라 + 레이더	|Civic, Accord, CR-V|
+| Hyundai·Kia	|SmartSense	|카메라 + 전방/코너 레이더	|Sonata, EV6, Ioniq 5/6|
+| Nissan	|ProPILOT	|카메라 + 레이더	|Leaf, Rogue|
+| GM	|Super Cruise	|카메라 + 레이더 + 맵	|Cadillac CT5, Escalade|
+| Ford	|BlueCruise	|카메라 + 레이더|	F-150, Mach-E|
+| VW Group	|IQ.Drive	|카메라 + 레이더	|Golf, Passat, ID.4|
+| BYD	|L2+/L2++ ADAS	|카메라 + 레이더	|Seagull 등 다수|
+| Tesla	|Autopilot/FSD	|최근 Camera-only 전략	|Model 3/Y/S/X|
 
-## 카메라 + Radar + LiDAR (고급차/L3 준비)
-Mercedes Drive Pilot / Volvo EX90 / Polestar 3 / NIO·XPeng·Li Auto / Waymo·Cruise Robotaxi
+## 🚘 카메라 + Radar + LiDAR 조합 (고급차/L3 차량 중심)
+| 제조사	| 센서 구조	| 적용 모델| 
+|:----:|:----:|:----:|
+| Mercedes-Benz	|LiDAR + 카메라 + 레이더	|S-Class, EQS|
+| Volvo / Polestar	|Luminar LiDAR + 카메라 + 레이더	|EX90, Polestar 3|
+| 중국 OEM(NIO, XPeng 등)	|고해상도 LiDAR 다중 배치	|L2+/L3 EV 다수|
+| Waymo / Cruise	|다중 LiDAR + 카메라 + 레이더	|Robotaxi 차량|
 
 ---
 
